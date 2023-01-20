@@ -34,7 +34,7 @@ paths:
   /auth/login:
     post:
       tags:
-        - Auth
+        - Authorization
       summary: Login User
       operationId: LoginUser
       parameters: []
@@ -171,7 +171,7 @@ components:
         password:
           type: string
       example:
-        email: susan@gmail.com
+        email: praveen@gmail.com
         password: secret
     CreateJobRequest:
       title: CreateJobRequest
