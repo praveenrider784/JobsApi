@@ -35,7 +35,7 @@ app.use(xss());
 
 // routes
 app.get('/',(req,res)=>{
-  res.send('<h1>Jobs-Api</h1><a href="/api-docs">Documentation</a>');
+  res.send('<h1>Jobs-Api</h1><a href="/api-docs">Api-Docs</a>');
 })
 app.use('/api-docs',swaggerUi.serve,swaggerUi.setup(swaggerDocument));
 app.use('/api/v1/auth',authrouter);
