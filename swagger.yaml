@@ -45,7 +45,7 @@ paths:
             schema:
               $ref: '#/components/schemas/LoginUserRequest'
             example:
-              email: susan@gmail.com
+              email: praveen@gmail.com
               password: secret
         required: true
       responses:
@@ -139,76 +139,3 @@ paths:
           description: ''
           headers: {}
       deprecated: false
-components:
-  schemas:
-    RegisterUserRequest:
-      title: RegisterUserRequest
-      required:
-        - name
-        - email
-        - password
-      type: object
-      properties:
-        name:
-          type: string
-        email:
-          type: string
-        password:
-          type: string
-      example:
-        name: bob
-        email: bob@gmail.com
-        password: secret
-    LoginUserRequest:
-      title: LoginUserRequest
-      required:
-        - email
-        - password
-      type: object
-      properties:
-        email:
-          type: string
-        password:
-          type: string
-      example:
-        email: praveen@gmail.com
-        password: secret
-    CreateJobRequest:
-      title: CreateJobRequest
-      required:
-        - company
-        - position
-      type: object
-      properties:
-        company:
-          type: string
-        position:
-          type: string
-      example:
-        company: google
-        position: front-end developer
-    UpdateJobRequest:
-      title: UpdateJobRequest
-      required:
-        - company
-        - position
-      type: object
-      properties:
-        company:
-          type: string
-        position:
-          type: string
-      example:
-        company: random
-        position: intern
-  securitySchemes:
-    httpBearer:
-      type: http
-      scheme: bearer
-security:
-  - httpBearer: []
-tags:
-  - name: Authorization
-    description: ''
-  - name: Jobs
-    description: ''
